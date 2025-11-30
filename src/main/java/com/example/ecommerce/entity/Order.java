@@ -29,6 +29,7 @@ public class Order {
     public Order(User user, double totalAmount) {
         this.user = user;
         this.totalAmount = totalAmount;
+        this.orderDate = new Date(); 
     }
 
 	public Long getId() {

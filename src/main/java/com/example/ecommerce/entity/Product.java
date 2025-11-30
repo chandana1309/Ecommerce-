@@ -9,6 +9,8 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "products")
 public class Product {
+	public Product() {}
+
 
 	
 	  @Id
@@ -18,6 +20,12 @@ public class Product {
 	    private String description;
 	    private double price;
 	    private int stock;
+	    private String imageUrl;
+	    private String category;
+	    private double rating = 0.0;
+	    private int ratingCount = 0;
+
+
 	    
 		public Long getId() {
 			return id;
@@ -49,6 +57,34 @@ public class Product {
 		}
 		public void setStock(int stock) {
 			this.stock = stock;
+		}
+		public String getImageUrl() {
+		    return imageUrl;
+		}
+
+		public void setImageUrl(String imageUrl) {
+		    this.imageUrl = imageUrl;
+		}
+		
+
+		public String getCategory() {
+			return category;
+		}
+		public void setCategory(String category) {
+			this.category = category;
+		}
+		
+		public double getRating() {
+			return rating;
+		}
+		public void setRating(double rating) {
+			this.rating = rating;
+		}
+		public int getRatingCount() {
+			return ratingCount;
+		}
+		public void setRatingCount(int ratingCount) {
+			this.ratingCount = ratingCount;
 		}
 		public Product(String name, String description, double price, int stock) {
 	        this.name = name;

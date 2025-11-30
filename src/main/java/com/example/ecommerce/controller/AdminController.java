@@ -45,6 +45,8 @@ public class AdminController {
 	        existing.setName(product.getName());
 	        existing.setDescription(product.getDescription());
 	        existing.setPrice(product.getPrice());
+	        existing.setStock(product.getStock());
+
 	        productRepo.save(existing);
 	        return ResponseEntity.ok("Product updated!");
 	    }

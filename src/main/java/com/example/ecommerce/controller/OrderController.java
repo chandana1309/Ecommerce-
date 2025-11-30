@@ -18,7 +18,7 @@ import com.example.ecommerce.repository.CartRepository;
 import com.example.ecommerce.repository.OrderRepository;
 import com.example.ecommerce.repository.UserRepository;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/orders")
 public class OrderController {
